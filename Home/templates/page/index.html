@@ -1,0 +1,603 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	{% extends "pages/layout.html" %}
+	{% load static %}
+	<style>
+        .modal-backdrop {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1040;
+            background-color: #000;
+        }
+	</style>
+</head>
+<body>
+	{% block title %}{% endblock %}
+	{% block content %}
+	<section class="awe-section-1">
+		<div class="home-slider owl-carousel owl-theme not-aweowl section_slider">
+			<div class="items">
+				<a href="#" class="clearfix">
+					<picture>
+						<source media="(max-width: 767px)" srcset="{% static 'assets/nen.jpg' %}">
+						<img src="{% static 'assets/nen.jpg' %}" alt="Slider 1" />
+					</picture>
+				</a>
+			</div>
+		</div>
+	</section>
+	<section class="awe-section-2">
+		<div class="section_collection_4">
+			<div class="row row-noGutter-2 row-noGutter-fix">
+				<div class="col-xs-12 col-sm-3 banner_content nth_1 lazyload" data-src="//bizweb.dktcdn.net/100/350/980/themes/939145/assets/col_1.png?1706077983929">
+					<div class="col_content">
+						<div class="content_">
+							<h3 class="banner-title"><a href="#" title="Rau quả tươi">Rau quả tươi</a></h3>
+							<span>
+								Chúng tôi cam kết 100% các sản phẩm có nguồn gốc xuất xứ rõ ràng, sạch, an toàn và đảm bảo chất lượng ngon nhất giao đến tận tay người tiêu dùng, để san sẻ sự vất vả của các mẹ, các chị
+							</span>
+							
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-3 banner_content nth_2 lazyload" data-src="//bizweb.dktcdn.net/100/350/980/themes/939145/assets/col_2.png?1706077983929">
+					<div class="col_content">
+						<div class="content_">
+							<h3 class="banner-title"><a href="#" title="Sinh tố hoa quả">Sinh tố hoa quả</a></h3>
+							<span>
+								Chúng tôi cam kết 100% các sản phẩm có nguồn gốc xuất xứ rõ ràng, sạch, an toàn và đảm bảo chất lượng ngon nhất giao đến tận tay người tiêu dùng, để san sẻ sự vất vả của các mẹ, các chị
+							</span>
+							
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-3 banner_content nth_3 lazyload" data-src="//bizweb.dktcdn.net/100/350/980/themes/939145/assets/col_3.png?1706077983929">
+					<div class="col_content">
+						<div class="content_">
+							<h3 class="banner-title"><a href="#" title="Thực phẩm tươi">Thực phẩm tươi</a></h3>
+							<span>
+								Chúng tôi cam kết 100% các sản phẩm có nguồn gốc xuất xứ rõ ràng, sạch, an toàn và đảm bảo chất lượng ngon nhất giao đến tận tay người tiêu dùng, để san sẻ sự vất vả của các mẹ, các chị
+							</span>
+							
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-3 banner_content nth_4 lazyload" data-src="//bizweb.dktcdn.net/100/350/980/themes/939145/assets/col_4.png?1706077983929">
+					<div class="col_content">
+						<div class="content_">
+							<h3 class="banner-title"><a href="#" title="Hoa quả tươi mát">Hoa quả tươi mát</a></h3>
+							<span>
+								Chúng tôi cam kết 100% các sản phẩm có nguồn gốc xuất xứ rõ ràng, sạch, an toàn và đảm bảo chất lượng ngon nhất giao đến tận tay người tiêu dùng, để san sẻ sự vất vả của các mẹ, các chị
+							</span>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="awe-section-3">
+		<div class="section_about">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-xs-12">
+
+						<div class="title_brand heading">
+							<h2 title="Về chúng tôi">
+								<span class="text_gradient">Về chúng tôi</span>
+							</h2>
+							<p>
+								Hiện tại vùng nguyên liệu của chúng tôi có thể cung cấp các thực tập tươi sạch với số lượng lớn vì đang vào vụ mùa thu hoạch nên chúng tôi có thể cung ứng cho tất cả các đối tác xuất khẩu nông sản trên cả nước.
+							</p>
+						</div>
+						<div class="uti_content">
+							<div class="owl-carousel owl-theme uti_content" data-nav="false" data-dot="true" data-lg-items="4" data-md-items="4" data-sm-items="3" data-xs-items="1" data-margin="30">
+
+
+
+
+								<div class="uti_body">
+									<span class="icon">
+										<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/350/980/themes/939145/assets/icon_uti_1.png?1706077983929" alt="Trang trại hữu cơ">
+									</span>
+									<div class="content">
+										<span class="title">Trang trại hữu cơ</span>
+										<span class="sum">Cung cấp 100% thực phẩm sạch đảm bảo an toàn và ngon nhất</span>
+									</div>
+								</div>
+
+
+
+
+								<div class="uti_body">
+									<span class="icon">
+										<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/350/980/themes/939145/assets/icon_uti_2.png?1706077983929" alt="Thực phẩm sạch">
+									</span>
+									<div class="content">
+										<span class="title">Thực phẩm sạch</span>
+										<span class="sum">Cung cấp 100% thực phẩm sạch đảm bảo an toàn và ngon nhất</span>
+									</div>
+								</div>
+
+
+
+
+								<div class="uti_body">
+									<span class="icon">
+										<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/350/980/themes/939145/assets/icon_uti_3.png?1706077983929" alt="An toàn sinh học">
+									</span>
+									<div class="content">
+										<span class="title">An toàn sinh học</span>
+										<span class="sum">Cung cấp 100% thực phẩm sạch đảm bảo an toàn và ngon nhất</span>
+									</div>
+								</div>
+
+
+
+
+								<div class="uti_body">
+									<span class="icon">
+										<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/100/350/980/themes/939145/assets/icon_uti_4.png?1706077983929" alt="Đa dạng sinh học">
+									</span>
+									<div class="content">
+										<span class="title">Đa dạng sinh học</span>
+										<span class="sum">Cung cấp 100% thực phẩm sạch đảm bảo an toàn và ngon nhất</span>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="awe-section-4">
+		<section class="section_tab_base section_product_feature section_base">
+			<div class="container">
+				<div class="row row-noGutter-2 content_tab_h heading">
+					<h2 class="title-head" title="Danh mục sản phẩm">
+						<a href="/collections/all" class="text_gradient">Danh mục sản phẩm</a>
+					</h2>
+					<div class="tab_link_module">
+
+						<div class="tabs-container tab_border">
+							<div class="button_click_1">
+								<span id="button_show_tab" class="hidden-sm hidden-md hidden-lg">
+									<i class="fas fa-caret-down fa"></i>
+								</span>
+								<span class="hidden-sm hidden-md hidden-lg title_check_tabs"></span>
+							</div>
+							<div class="clearfix">
+								<ul class="ul_link link_tab_check_click">
+
+
+									<li class="li_tabs li_h">
+										<a href="#content-tabb1" class="head-tabs head-tab1" data-src=".head-tab1">Hoa quả tươi</a>
+									</li>
+
+									<li class="li_tabs li_h">
+										<a href="#content-tabb2" class="head-tabs head-tab2" data-src=".head-tab2">Hoa quả đóng hộp</a>
+									</li>
+
+									<li class="li_tabs li_h">
+										<a href="#content-tabb3" class="head-tabs head-tab3" data-src=".head-tab3">Nước hoa quả</a>
+									</li>
+
+									<li class="li_tabs li_h">
+										<a href="#content-tabb4" class="head-tabs head-tab4" data-src=".head-tab4">Hộp quà hoa quả</a>
+									</li>
+
+
+
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="tab_link_module">
+
+						<div class="tabs-content">
+
+							<div id="content-tabb1" class="content-tab content-tab-proindex" style="display:none">
+								<div class="clearfix wrap_item_list row products-view-grid-bb products-view-grid">
+									{% for product in products_hoa_qua_tuoi %}
+									<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 fix_clear">
+										<div class="item wrp_item_small product-col">
+											<div class="product-box-h product-base">
+												<div class="product-thumbnail">
+													<a class="image_link display_flex" href="{% url 'UserMember:chiTietSP' product_id=product.MaSP %}" title="{{ product.TenSP }}">
+														<img class="lazyload" src="{% static product.Anh %}" alt="{{ product.TenSP }}">
+													</a>
+													<div class="product-action clearfix hidden-xs">
+														<form action="/cart/add/" method="post" class="variants form-nut-grid" data-id="product-actions-{{ product.MaSP }}" enctype="multipart/form-data">
+															{% csrf_token %}
+															<div class="group_action">
+																<input type="hidden" name="variantId" value="{{ product.MaSP }}" />
+																<button class="btn-buy btn-cart btn btn-circle left-to add_to_cart " title="Mua ngay">
+																</button>
+																<a title="Xem nhanh" href="/SanPham/Detail/{{ product.MaSP }}" data-handle="{{ product.TenSP }}" class="xem_nhanh btn-circle btn_view btn right-to quick-view hidden-xs hidden-sm hidden-md"></a>
+															</div>
+														</form>
+
+													</div>
+												</div>
+												<div class="product-info a-left">
+													<h3 class="product-name"><a href="/SanPham/Detail/{{ product.MaSP }}" title="{{ product.TenSP }}">{{ product.TenSP }}</a></h3>
+													<div class="product-hideoff">
+														<div class="product-hide">
+															<div class="price-box clearfix">
+																<div class="special-price">
+																	<span class="price product-price format-price">{{ product.GiaMoi|floatformat }} đ</span>
+																</div>
+																<div class="old-price">
+																	<span class="price product-price-old format-price">{{ product.GiaCu|floatformat }} đ</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									{% endfor %}
+								</div>
+							</div>
+
+							<div id="content-tabb2" class="content-tab content-tab-proindex" style="display:none">
+								<div class="clearfix wrap_item_list row products-view-grid-bb products-view-grid">
+									{% for product in products_hoa_qua_dong_hop %}
+									<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 fix_clear">
+										<div class="item wrp_item_small product-col">
+											<div class="product-box-h product-base">
+												<div class="product-thumbnail">
+													<a class="image_link display_flex" href="/SanPham/Detail/{{ product.MaSP }}" title="{{ product.TenSP }}">
+														<img class="lazyload" src="{% static product.Anh %}" alt="{{ product.TenSP }}">
+													</a>
+													<div class="product-action clearfix hidden-xs">
+														<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-{{ product.MaSP }}" enctype="multipart/form-data">
+															<div class="group_action">
+																<input type="hidden" name="variantId" value="{{ product.MaSP }}" />
+																<button class="btn-buy btn-cart btn btn-circle left-to add_to_cart " title="Mua ngay"></button>
+																<a title="Xem nhanh" href="/SanPham/Detail/{{ product.MaSP }}" data-handle="{{ product.TenSP }}" class="xem_nhanh btn-circle btn_view btn right-to quick-view hidden-xs hidden-sm hidden-md"></a>
+															</div>
+														</form>
+													</div>
+												</div>
+												<div class="product-info a-left">
+													<h3 class="product-name"><a href="/SanPham/Detail/{{ product.MaSP }}" title="{{ product.TenSP }}">{{ product.TenSP }}</a></h3>
+													<div class="product-hideoff">
+														<div class="product-hide">
+															<div class="price-box clearfix">
+																<div class="special-price">
+																	<span class="price product-price format-price">{{ product.GiaMoi|floatformat }} đ</span>
+																</div>
+																<div class="old-price">
+																	<span class="price product-price-old format-price">{{ product.GiaCu|floatformat }} đ</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									{% endfor %}
+								</div>
+							</div>
+
+							<div id="content-tabb3" class="content-tab content-tab-proindex" style="display:none">
+								<div class="clearfix wrap_item_list row products-view-grid-bb products-view-grid">
+									{% for product in products_nuoc_hoa_qua %}
+									<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 fix_clear">
+										<div class="item wrp_item_small product-col">
+											<div class="product-box-h product-base">
+												<div class="product-thumbnail">
+													<a class="image_link display_flex" href="/SanPham/Detail/{{ product.MaSP }}" title="{{ product.TenSP }}">
+														<img class="lazyload" src="{% static product.Anh %}" alt="{{ product.TenSP }}">
+													</a>
+													<div class="product-action clearfix hidden-xs">
+														<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-{{ product.MaSP }}" enctype="multipart/form-data">
+															<div class="group_action">
+																<input type="hidden" name="variantId" value="{{ product.MaSP }}" />
+																<button class="btn-buy btn-cart btn btn-circle left-to add_to_cart " title="Mua ngay"></button>
+																<a title="Xem nhanh" href="/SanPham/Detail/{{ product.MaSP }}" data-handle="{{ product.TenSP }}" class="xem_nhanh btn-circle btn_view btn right-to quick-view hidden-xs hidden-sm hidden-md"></a>
+															</div>
+														</form>
+													</div>
+												</div>
+												<div class="product-info a-left">
+													<h3 class="product-name"><a href="/SanPham/Detail/{{ product.MaSP }}" title="{{ product.TenSP }}">{{ product.TenSP }}</a></h3>
+													<div class="product-hideoff">
+														<div class="product-hide">
+															<div class="price-box clearfix">
+																<div class="special-price">
+																	<span class="price product-price format-price">{{ product.GiaMoi|floatformat }} đ</span>
+																</div>
+																<div class="old-price">
+																	<span class="price product-price-old format-price">{{ product.GiaCu|floatformat }} đ</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									{% endfor %}
+								</div>
+							</div>
+
+							<div id="content-tabb4" class="content-tab content-tab-proindex" style="display:none">
+								<div class="clearfix wrap_item_list row products-view-grid-bb products-view-grid">
+									{% for product in products_hop_qua_hoa_qua %}
+									<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 fix_clear">
+										<div class="item wrp_item_small product-col">
+											<div class="product-box-h product-base">
+												<div class="product-thumbnail">
+													<a class="image_link display_flex" href="/SanPham/Detail/{{ product.MaSP }}" title="{{ product.TenSP }}">
+														<img class="lazyload" src="{% static product.Anh %}" alt="{{ product.TenSP }}">
+													</a>
+													<div class="product-action clearfix hidden-xs">
+														<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-{{ product.MaSP }}" enctype="multipart/form-data">
+															<div class="group_action">
+																<input type="hidden" name="variantId" value="{{ product.MaSP }}" />
+																<button class="btn-buy btn-cart btn btn-circle left-to add_to_cart " title="Mua ngay"></button>
+																<a title="Xem nhanh" href="/SanPham/Detail/{{ product.MaSP }}" data-handle="{{ product.TenSP }}" class="xem_nhanh btn-circle btn_view btn right-to quick-view hidden-xs hidden-sm hidden-md"></a>
+															</div>
+														</form>
+													</div>
+												</div>
+												<div class="product-info a-left">
+													<h3 class="product-name"><a href="/SanPham/Detail/{{ product.MaSP }}" title="{{ product.TenSP }}">{{ product.TenSP }}</a></h3>
+													<div class="product-hideoff">
+														<div class="product-hide">
+															<div class="price-box clearfix">
+																<div class="special-price">
+																	<span class="price product-price format-price">{{ product.GiaMoi|floatformat }} đ</span>
+																</div>
+																<div class="old-price">
+																	<span class="price product-price-old format-price">{{ product.GiaCu|floatformat }} đ</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									{% endfor %}
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</section>
+
+	<section class="awe-section-5">
+		<div class="section_hotline lazyload" data-src="//bizweb.dktcdn.net/100/350/980/themes/939145/assets/bg_hotline.jpg?1706077983929" data-was-processed="true" style="background-image: url(&quot;//bizweb.dktcdn.net/100/350/980/themes/939145/assets/bg_hotline.jpg?1706077983929&quot;);">
+			<div class="parallax">
+				<div class="wrapper">
+					<div class="custom-center text-center">
+						<div class="custom-center-body">
+							<h2>Hotline</h2>
+
+							<a class="hai01" href="tel:19006750">1900 6750</a>
+
+							<p>Chúng tôi cam kết 100% các sản phẩm có nguồn gốc xuất xứ rõ ràng, sạch, an toàn và đảm bảo chất lượng ngon nhất.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="awe-section-7">
+
+		<div class="section_new_blog">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="heading">
+							<h2 class="title-head" title="Tin tức mới nhất">
+								<a href="{% url 'UserMember:TinTuc' %}" class="text_gradient">
+									Tin tức mới nhất
+								</a>
+							</h2>
+						</div>
+						<div class="content_blog_new">
+							<div class="wrap_owl_blog owl-carousel" data-lg-items="3" data-md-items="3" data-sm-items="2" data-xs-items="1" data-loop="false" data-height="false" data-dot="false" data-nav="false">
+
+								<div class="blog_index">
+									<div class="myblog" onclick="window.location.href='https://greenfamily.com.vn/rau-xanh-tang-gia-manh-vi-troi-mua-nguoi-dan-noi-thanh-lao-dao';">
+										<div class="image-blog-left a-center">
+
+											<a class="image-blog" href="https://greenfamily.com.vn/rau-xanh-tang-gia-manh-vi-troi-mua-nguoi-dan-noi-thanh-lao-dao" title="Rau xanh tăng giá mạnh vì trời mưa, người dân nội thành lao đao">
+												<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/large/100/350/980/articles/49997669-476326726231228-9092403644171095934-n.jpg?v=1553650991913" alt="Rau xanh tăng giá mạnh vì trời mưa, người dân nội thành lao đao">
+											</a>
+
+											<div class="date_blog">
+												<i class="far fa-calendar"></i><b class="color_main">27/03/2019</b>
+												&nbsp; Đăng bởi: <b class="color_main">Cool Team</b>
+											</div>
+										</div>
+										<div class="content_blog">
+											<div class="content_right">
+												<h3>
+													<a href="https://greenfamily.com.vn/rau-xanh-tang-gia-manh-vi-troi-mua-nguoi-dan-noi-thanh-lao-dao" title="Rau xanh tăng giá mạnh vì trời mưa, người dân nội thành lao đao">Rau xanh tăng giá mạnh vì trời mưa, người dân nội thành lao đao</a>
+												</h3>
+											</div>
+											<div class="summary_item_blog">
+												<p>Khoảng gần một tuần nay, do ảnh hưởng của những cơn mưa lớn kéo dài liên tiếp nên ...</p>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="blog_index">
+									<div class="myblog" onclick="window.location.href='https://cafef.vn/nhap-khau-rau-qua-vuot-moc-1-ty-usd-thai-lan-chiem-60-thi-phan-2017092707394307.chn';">
+										<div class="image-blog-left a-center">
+
+											<a class="image-blog" href="https://cafef.vn/nhap-khau-rau-qua-vuot-moc-1-ty-usd-thai-lan-chiem-60-thi-phan-2017092707394307.chn" title="Nhập khẩu rau quả vượt mốc 1 tỷ USD, Thái Lan chiếm 60% thị phần">
+												<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/large/100/350/980/articles/41968416-280694729439890-8459559393178510661-n.jpg?v=1553650945157" alt="Nhập khẩu rau quả vượt mốc 1 tỷ USD, Thái Lan chiếm 60% thị phần">
+											</a>
+
+											<div class="date_blog">
+												<i class="far fa-calendar"></i><b class="color_main">27/03/2019</b>
+												&nbsp; Đăng bởi: <b class="color_main">Cool Team</b>
+											</div>
+										</div>
+										<div class="content_blog">
+											<div class="content_right">
+												<h3>
+													<a href="https://cafef.vn/nhap-khau-rau-qua-vuot-moc-1-ty-usd-thai-lan-chiem-60-thi-phan-2017092707394307.chn" title="Nhập khẩu rau quả vượt mốc 1 tỷ USD, Thái Lan chiếm 60% thị phần">Nhập khẩu rau quả vượt mốc 1 tỷ USD, Thái Lan chiếm 60% thị phần</a>
+												</h3>
+											</div>
+											<div class="summary_item_blog">
+												<p>Theo báo cáo từ Bộ NN&amp;PTNT, giá trị xuất khẩu hàng rau quả tháng 9 năm 2017 ướ...</p>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="blog_index">
+									<div class="myblog" onclick="window.location.href='https://hoangkieufoods.com/bi-quyet-bao-quan-nho-den-trong-tu-lanh-tuoi-lau-hon/';">
+										<div class="image-blog-left a-center">
+
+											<a class="image-blog" href="https://hoangkieufoods.com/bi-quyet-bao-quan-nho-den-trong-tu-lanh-tuoi-lau-hon/" title="Bí quyết bảo quản nho đen trong tủ lạnh tươi lâu hơn">
+												<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/large/100/350/980/articles/istock-688005624-1000-plus-copy.jpg?v=1553650879330" alt="Bí quyết bảo quản nho đen trong tủ lạnh tươi lâu hơn">
+											</a>
+
+											<div class="date_blog">
+												<i class="far fa-calendar"></i><b class="color_main">27/03/2019</b>
+												&nbsp; Đăng bởi: <b class="color_main">Cool Team</b>
+											</div>
+										</div>
+										<div class="content_blog">
+											<div class="content_right">
+												<h3>
+													<a href="https://hoangkieufoods.com/bi-quyet-bao-quan-nho-den-trong-tu-lanh-tuoi-lau-hon/" title="Bí quyết bảo quản nho đen trong tủ lạnh tươi lâu hơn">Bí quyết bảo quản nho đen trong tủ lạnh tươi lâu hơn</a>
+												</h3>
+											</div>
+											<div class="summary_item_blog">
+												<p>Bí quyết lựa chọn và bảo quản nho tươi – Nho rất ngon và tốt cho sức khỏe, tuy nhi...</p>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	<section class="awe-section-8">
+		<div class="section_top_brand">
+			<div class="container">
+				<div class="row">
+					<div class="title_brand heading">
+						<h2 title="Top thương hiệu">
+							<span class="text_gradient">Top thương hiệu</span>
+						</h2>
+					</div>
+					<div class="col-lg-12 col-xs-12 item_fix_brand">
+						<div class="owl-carousel owl-theme brand_content not-aweowl">
+
+
+
+
+
+							<div class="item">
+								<a class="img_" href="#">
+									<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/compact/100/350/980/themes/939145/assets/brand_1.png?1706077983929" alt="Cool Organic">
+								</a>
+							</div>
+
+
+
+
+
+
+							<div class="item">
+								<a class="img_" href="#">
+									<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/compact/100/350/980/themes/939145/assets/brand_2.png?1706077983929" alt="Cool Organic">
+								</a>
+							</div>
+
+
+
+
+
+
+							<div class="item">
+								<a class="img_" href="#">
+									<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/compact/100/350/980/themes/939145/assets/brand_3.png?1706077983929" alt="Cool Organic">
+								</a>
+							</div>
+
+
+
+
+
+
+							<div class="item">
+								<a class="img_" href="#">
+									<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/compact/100/350/980/themes/939145/assets/brand_4.png?1706077983929" alt="Cool Organic">
+								</a>
+							</div>
+
+
+
+
+
+
+							<div class="item">
+								<a class="img_" href="#">
+									<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/compact/100/350/980/themes/939145/assets/brand_5.png?1706077983929" alt="Cool Organic">
+								</a>
+							</div>
+
+
+
+
+
+
+							<div class="item">
+								<a class="img_" href="#">
+									<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="//bizweb.dktcdn.net/thumb/compact/100/350/980/themes/939145/assets/brand_6.png?1706077983929" alt="Cool Organic">
+								</a>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!--<script src="{% static 'assets/stats.minbadf.js' %}"></script>-->
+	<!--<script src="{% static 'assets/cs.script1615.js' %}" type="text/javascript"></script>-->
+	<!--<script src="{% static 'assets/api-jquery-custom1615.js' %}" type="text/javascript"></script>-->
+	<script type="text/javascript" src="{% static 'bootstrap-5.3.3-dist/js/bootstrap.js' %}"></script>
+	{% endblock %}
+</body>
+</html>

@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xóa Sản Phẩm</title>
+    {% extends "pages/layout.html" %}
+    {% load static %}
+</head>
+<body>
+    {% block content %}
+    <div class="breadcrumb_background margin-bottom-40">
+        <div class="title_full">
+            <div class="container a-center">
+                <p class="title_page">Xóa sản phẩm</p>
+            </div>
+        </div>
+        <section class="bread-crumb">
+            <span class="crumb-border"></span>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 a-center">
+                        <ul class="breadcrumb">
+                            <li class="home">
+                                <a href="/"><span>Trang chủ</span></a>
+                                <span class="mr_lr">&nbsp;<i class="fa fa-angle-right"></i>&nbsp;</span>
+                            </li>
+
+                            <li><strong><span>Xóa sản phẩm</span></strong></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="container mt-5">
+        <h1>Xóa Sản Phẩm</h1>
+        <p>Bạn có chắc chắn muốn xóa sản phẩm: <strong>{{ san_pham.TenSP }}</strong>?</p>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Xóa</button>
+            <a href="{% url 'UserMember:quanLyDanhMuc' %}" class="btn btn-secondary">Hủy</a>
+        </form>
+    </div>
+    {% endblock %}
+</body>
+</html>

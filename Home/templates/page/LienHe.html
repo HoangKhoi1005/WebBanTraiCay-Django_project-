@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    {% extends "pages/layout.html" %}
+    {% load static %}
+</head>
+<body>
+    {% block content %}
+    <div class="breadcrumb_background margin-bottom-40">
+        <div class="title_full">
+            <div class="container a-center">
+                <p class="title_page">Liên hệ</p>
+            </div>
+        </div>
+        <section class="bread-crumb">
+            <span class="crumb-border"></span>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 a-center">
+                        <ul class="breadcrumb">
+                            <li class="home">
+                                <a href="/"><span>Trang chủ</span></a>
+                                <span class="mr_lr">&nbsp;<i class="fa fa-angle-right"></i>&nbsp;</span>
+                            </li>
+
+                            <li><strong><span>Liên hệ</span></strong></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="page_contact">
+        <div class="container">
+            <div class="row">
+                <div class="select_maps col-md-4 col-sm-12 col-xs-12">
+                    <div class="aa mid_fot_h contact_r">
+                        <ul class="contact padding-0">
+                            <li class="li_footer_h">
+                                <span class="txt_content_child">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span class="add">
+
+                                        140 Đ. Lê Trọng Tấn, Tây Thạnh, Tân Phú, Thành phố Hồ Chí Minh
+
+                                    </span>
+                                </span>
+                            </li>
+                            <li class="li_footer_h">
+                                <span class="txt_content_childs">
+
+
+                                    <i class="fas fa-mobile-alt"></i> <a class="hai01" href="tel:19006750">0123456789</a>
+
+                                </span>
+                            </li>
+                            <li class="li_footer_h">
+                                <span class="txt_content_childs">
+
+                                    <i class="far fa-envelope"></i> <a href="#">Nhom5Team@gmail.com</a>
+
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="page-login page_cotact">
+
+                        <h1 class="title-head-contact a-left"><span>Liên hệ với chúng tôi</span></h1>
+                        <div id="pagelogin" class="margin-top-0">
+                            <form method="post" action="/postcontact" id="contact" accept-charset="UTF-8">
+                                <input name="FormType" type="hidden" value="contact" /><input name="utf8" type="hidden" value="true" /><input type="hidden" id="Token-1dfe6b1a9378421cb40b011efc127554" name="Token" />
+                                <script src="https://www.google.com/recaptcha/api.js?render=6Ldtu4IUAAAAAMQzG1gCw3wFlx_GytlZyLrXcsuK"></script>
+                                <script>grecaptcha.ready(function() {grecaptcha.execute("6Ldtu4IUAAAAAMQzG1gCw3wFlx_GytlZyLrXcsuK", {action: "contact"}).then(function(token) {document.getElementById("Token-1dfe6b1a9378421cb40b011efc127554").value = token});});</script>
+
+
+                                <div class="form-signup clearfix">
+                                    <div class="row group_contact">
+                                        <fieldset class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <input placeholder="Họ và tên" type="text" class="form-control  form-control-lg" required value="" name="contact[Name]">
+                                        </fieldset>
+                                        <fieldset class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <input placeholder="Email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required id="email1" class="form-control form-control-lg" value="" name="contact[email]">
+                                        </fieldset>
+                                        <fieldset class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <textarea placeholder="Nội dung" name="contact[body]" id="comment" class="form-control content-area form-control-lg" rows="5" Required></textarea>
+                                        </fieldset>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button type="submit" class="btn btn-primary btn-comment button_gradient">Gửi liên hệ</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="select_maps col-md-8 col-sm-12 col-xs-12">
+                    <div class="section_mapss margin-bottom-50">
+                        <div class="box-maps">
+                            <div class="iFrameMap">
+                                <div class="google-map">
+                                    <div id="contact_map" class="map">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.891370428688!2d106.626188!3d10.8061539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752be27d8b4f4d%3A0x92dcba2950430867!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBUaOG7k25nIFRQLiBI4buTIENow60gTWluaCAoSFVJVCk!5e0!3m2!1svi!2s!4v1553499875578" 
+                                                width="100%"
+                                                height="500"
+                                                style="border:0;"
+                                                allowfullscreen=""
+                                                loading="lazy"
+                                                referrerpolicy="no-referrer-when-downgrade">
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

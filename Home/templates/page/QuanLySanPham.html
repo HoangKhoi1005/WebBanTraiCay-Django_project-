@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Sản Phẩm</title>
+    {% extends "pages/layout.html" %}
+    {% load static %}
+</head>
+<body>
+    {% block content %}
+    <div class="breadcrumb_background margin-bottom-40">
+        <div class="title_full">
+            <div class="container a-center">
+                <p class="title_page">Quản lý sản phẩm</p>
+            </div>
+        </div>
+        <section class="bread-crumb">
+            <span class="crumb-border"></span>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 a-center">
+                        <ul class="breadcrumb">
+                            <li class="home">
+                                <a href="/"><span>Trang chủ</span></a>
+                                <span class="mr_lr">&nbsp;<i class="fa fa-angle-right"></i>&nbsp;</span>
+                            </li>
+                            <li><strong><span>Quản lý sản phẩm</span></strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <button type="button" class="btn btn-primary" id="add-category-btn" style=" background: #1395e4;">Thêm loại sản phẩm</button>
+    <table class="table table-striped mt-3">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Tên Sản Phẩm</th>
+                <th scope="col">Nguồn Gốc</th>
+                <th scope="col">Mô Tả</th>
+                <th scope="col">Giá Cũ</th>
+                <th scope="col">Giá Mới</th>
+                <th scope="col">Ảnh</th>
+                <th scope="col">Ảnh 1</th>
+                <th scope="col">Ngày Nhập</th>
+                <th scope="col">Loại Sản Phẩm</th>
+                <th scope="col">Hành Động</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for san_pham in dsSanPham %}
+            <tr>
+                <th scope="row">{{ forloop.counter }}</th>
+                <td><a href="/SanPham/Detail/{{ san_pham.MaSP }}">{{ san_pham.TenSP }}</a></td>
+                <td>{{ san_pham.NguonGoc }}</td>
+                <td>{{ san_pham.MoTa }}</td>
+                <td style="width:100px" class="format-price">{{ san_pham.GiaCu }}</td>
+                <td style="width:100px" class="format-price">{{ san_pham.GiaMoi }}</td>
+                <td><img src="{% static san_pham.Anh %}" alt="{{ san_pham.TenSP }}" style="width: 500px;"></td>
+                <td><img src="{% static san_pham.Anh1 %}" alt="{{ san_pham.TenSP }}" style="width: 500px; "></td>
+                <td>{{ san_pham.NgayNhap }}</td>
+                <td>{{ san_pham.MaLoai.TenLoaiSP }}</td>
+                <td>
+                    <button type="button" class="btn btn-danger btn-delete" data-id="{{ san_pham.MaSP }}">Xóa loại</button>
+                    <button type="button" class="btn btn-warning btn-edit" data-id="{{ san_pham.MaSP }}">Sửa loại</button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="text-right">
+        <nav class="clearfix nav_pagi f-left w_100">
+            <ul class="pagination clearfix">
+                {% if dsSanPham.has_previous %}
+                <li class="page-item"><a class="page-link" href="?page=1"><i class="fas fa-angle-double-left"></i></a></li>
+                <li class="page-item"><a class="page-link" href="?page={{ dsSanPham.previous_page_number }}"><i class="fas fa-angle-left"></i></a></li>
+                {% else %}
+                <li class="page-item disabled"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
+                {% endif %}
+                {% for page_num in dsSanPham.paginator.page_range %}
+                {% if dsSanPham.number == page_num %}
+                <li class="page-item active"><a class="page-link" href="#">{{ page_num }}</a></li>
+                {% elif page_num > dsSanPham.number|add:'-3' and page_num < dsSanPham.number|add:'3' %}
+                <li class="page-item"><a class="page-link" href="?page={{ page_num }}">{{ page_num }}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% if dsSanPham.has_next %}
+                <li class="page-item"><a class="page-link" href="?page={{ dsSanPham.next_page_number }}"><i class="fas fa-angle-right"></i></a></li>
+                <li class="page-item"><a class="page-link" href="?page={{ dsSanPham.paginator.num_pages }}"><i class="fas fa-angle-double-right"></i></a></li>
+                {% else %}
+                <li class="page-item disabled"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+    <script>
+        document.getElementById("add-category-btn").addEventListener("click", function () {
+            window.location.href = "{% url 'UserMember:themSanPham' %}";
+        });
+
+        document.querySelectorAll(".btn-edit").forEach(function (button) {
+            button.addEventListener("click", function () {
+                var id = this.getAttribute("data-id");
+                window.location.href = "{% url 'UserMember:suaSanPham' 0 %}".replace('0', id);
+            });
+        });
+
+        document.querySelectorAll(".btn-delete").forEach(function (button) {
+            button.addEventListener("click", function () {
+                var id = this.getAttribute("data-id");
+                window.location.href = "{% url 'UserMember:xoaSanPham' 0 %}".replace('0', id);
+            });
+        });
+    </script>
+    {% endblock %}
+</body>
+</html>

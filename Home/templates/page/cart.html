@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    {% extends "pages/layout.html" %}
+    {% load static %}
+</head>
+<body>
+    {% block title %}{% endblock %}
+    {% block content %}
+    <div class="breadcrumb_background margin-bottom-40">
+        <div class="title_full">
+            <div class="container a-center">
+                <p class="title_page">Giỏ hàng</p>
+            </div>
+        </div>
+        <section class="bread-crumb">
+            <span class="crumb-border"></span>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 a-center">
+                        <ul class="breadcrumb">
+                            <li class="home">
+                                <a href="/"><span>Trang chủ</span></a>
+                                <span class="mr_lr">&nbsp;<i class="fa fa-angle-right"></i>&nbsp;</span>
+                            </li>
+
+                            <li><strong><span>Giỏ hàng</span></strong></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="main-cart-page main-container col1-layout">
+        <div class="main container hidden-xs">
+            <div class="header-cart">
+                <h1 class="title_cart margin-bottom-20" title="Giỏ hàng của bạn">
+                    <a href="#">Giỏ hàng của bạn <span>(<span class="cart-popup-count"></span> sản phẩm)</span></a>
+                </h1>
+                <div class="header-cart title_cart_pc hidden-sm hidden-xs">
+
+                </div>
+            </div>
+            <div class="col-main cart_desktop_page cart-page">
+                <div class="cart page_cart hidden-xs">
+                    <form action="/cart" method="post" novalidate class="margin-bottom-0">
+                        <div class="bg-scroll">
+                            <div class="cart-thead hidden">
+                                <div style="width: 19%; text-align: left;">Sản phẩm</div>
+                                <div style="width: 28%; text-align: left; padding-left: 5px;"></div>
+                                <div style="width: 17%" class="a-center"><span class="nobr">Giá</span></div>
+                                <div style="width: 18%" class="a-center">Số lượng</div>
+                                <div style="width: 5%" class="a-center">Xóa</div>
+                                <div style="width: 13%; text-align: right!important;" class="a-center">Thành tiền</div>
+                            </div>
+                            <div class="cart-tbody">
+                                <!-- Cart Item 1 -->
+                                {% for item in DM_GH %}
+                                <div class="item-cart productid-23813701">
+                                    <div style="width: 10%" class="image cart1">
+                                        <a class="product-image" title="Quả óc chó" href="/SanPham/Detail/{{ item.MaSP.MaSP }}">
+                                            <img width="120" height="auto" alt="Quả óc chó" src="/static/{{item.MaSP.Anh}}">
+                                        </a>
+                                    </div>
+                                    <div style="width: 50%; align-items: flex-start;" class="a-center cart2">
+                                        <h2 class="product-name">
+                                            <a title="Quả óc chó" href="/SanPham/Detail/{{ item.MaSP.MaSP }}">{{ item.MaSP.TenSP }}</a>
+                                            <span class="variant-title" style="display: none;">Default Title</span>
+                                        </h2>
+                                        <span class="item-price"><span class="price pricechange format-price">{{item.MaSP.GiaMoi}}₫</span></span>
+                                    </div>
+                                    <div style="width: 18%" class="a-center">
+                                        <div class="input_qty_pr relative">
+                                            <input class="variantID" type="hidden" name="variantId" value="{{ item.MaSP.MaSP }}">
+                                            <button class="reduced_pop items-count btn-minus" type="button" data-variant-id="{{ item.MaSP.MaSP }}" data-action="decrease">–</button>
+                                            <input type="text" maxlength="2" min="0" class="input-text number-sidebar input_pop input_pop qtyItem{{ item.MaSP.MaSP }}" id="qtyItem{{ item.MaSP.MaSP }}" name="Lines" size="4" value="{{ item.SoLuong }}" onchange="if(this.value == 0) this.value=1;" onkeypress="if (isNaN(this.value + String.fromCharCode(event.keyCode))) return false;">
+                                            <button class="increase_pop items-count btn-plus" type="button" data-variant-id="{{ item.MaSP.MaSP }}" data-action="increase">+</button>
+                                        </div>
+                                    </div>
+                                    <div style="width: 18%; align-items: flex-end; padding-right: 0;" class="a-center cart6">
+                                        <span class="tongtien">Tổng tiền:</span>
+                                        <span class="cart-price"><span class="price format-price" id="itemTotal{{ item.MaSP.MaSP }}">{{ item.TongTien }}₫</span></span>
+                                        <a class="button remove-item remove-item-cart" title="Xóa" href="javascript:;" data-id="{{ item.MaSP.MaSP }}"><span><i class="fas fa-trash"></i></span>Xóa</a>
+                                    </div>
+
+                                </div>
+                                {% endfor %}
+                            </div>
+
+                        </div>
+                    </form>
+                    <div class="cart-collaterals cart_submit row">
+                        <div class="col-sm-12 col-md-12 col-xs-12">
+                            <div class="totals">
+                                <div class="inner">
+                                    <table class="table shopping-cart-table-total margin-bottom-0" id="shopping-cart-totals-table">
+                                        <colgroup><col><col></colgroup>
+                                        <tfoot>
+                                            <tr>
+                                                <td colspan="20" class="a-right"></td>
+                                                <td class="a-right">
+                                                    <span class="tt">Thành tiền:</span>
+                                                    <strong><span class="totals_price price tong_tien_gio_hang format-price">{{ TongTien }}₫</span></strong>
+                                                </td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                    <ul class="checkout">
+                                        <li class="clearfix">
+                                            <button class="btn btn-primary button btn-proceed-checkout f-right button_gradient" title="Tiến hành đặt hàng" type="button" onclick="window.location.href='/checkout'">
+                                                <span style="text-transform: initial;">Đặt hàng ngay</span>
+                                            </button>
+                                            <button class="btn btn-gray margin-right-15 f-right" title="Tiếp tục mua hàng" type="button" onclick="window.location.href='/collections/all'">
+                                                <span style="text-transform: initial;">Tiếp tục mua hàng</span>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <div class="sapo-buyxgety-module-cart-v2 container"></div>
+    <script>
+        $(document).ready(function() {
+            $('.btn-minus, .btn-plus').on('click', function() {
+                var variantId = $(this).data('variant-id');
+                var action = $(this).data('action');
+                var quantityInput = $('#qtyItem' + variantId);
+                var quantity = parseInt(quantityInput.val());
+
+                $.ajax({
+                    url: "{% url 'UserMember:capNhatGH' %}",
+                    method: "POST",
+                    data: {
+                        csrfmiddlewaretoken: "{{ csrf_token }}",
+                        variantId: variantId,
+                        action: action
+                    },
+                    success: function(response) {
+                        if (response.success) {
+                            quantityInput.val(response.item_quantity);
+                            $('#itemTotal' + variantId).text(formatPriceVND(response.item_total));
+                            $('.totals_price').text(formatPriceVND(response.cart_total));
+                            updateCartCount();
+                        } else {
+                            alert(response.error);
+                        }
+                    }
+                });
+            });
+
+
+            function updateCartCount() {
+                $.ajax({
+                    url: "{% url 'UserMember:soLuongSP' %}", 
+                    method: "GET",
+                    success: function (response) {
+                        $('.count_item').text(response.so_luong_san_pham);
+                    },
+                    error: function () {
+
+                        console.error('Lỗi khi cập nhật số lượng sản phẩm.');
+                    }
+                });
+            }
+
+            $('.remove-item-cart').on('click', function () {
+                var productId = $(this).data('id');
+                var itemRow = $(this).closest('.item-cart');
+
+                $.ajax({
+                    url: "{% url 'UserMember:xoaSPGH' %}",
+                    method: "POST",
+                    data: {
+                        csrfmiddlewaretoken: "{{ csrf_token }}",
+                        product_id: productId
+                    },
+                    success: function (response) {
+                        if (response.success) {
+                            itemRow.remove();
+                            $('.totals_price').text(formatPriceVND(response.cart_total));
+                            updateCartCount();
+                        } else {
+                            alert(response.error);
+                        }
+                    },
+                    error: function () {
+                        alert('Có lỗi xảy ra, vui lòng thử lại.');
+                    }
+                });
+            });
+        });
+    </script>
+    {% endblock %}
+</body>
+</html>

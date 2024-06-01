@@ -1,0 +1,119 @@
+﻿
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+    <meta charset="utf-8" />
+    <title></title>
+    {% extends "pages/layout.html" %}
+    {% block title %} Đăng nhập {% endblock %}
+</head>
+<body>
+    {% block content %}
+    <div class="breadcrumb_background margin-bottom-40">
+        <div class="title_full">
+            <div class="container a-center">
+                <p class="title_page">Đăng nhập tài khoản</p>
+            </div>
+        </div>
+        <section class="bread-crumb">
+            <span class="crumb-border"></span>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 a-center">
+                        <ul class="breadcrumb">
+                            <li class="home">
+                                <a href="/"><span>Trang chủ</span></a>
+                                <span class="mr_lr">&nbsp;<i class="fa fa-angle-right"></i>&nbsp;</span>
+                            </li>
+
+                            <li><strong><span>Đăng nhập tài khoản</span></strong></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="bg_base_lr">
+        <div class="container">
+            <div class="row row-noGutter-2">
+                <div class="content_login_base">
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"></div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 margin-bottom-40 padding_xs_0">
+                        <div class="page_login_ page_base_h">
+                            <div id="login">
+                                <form method="post" action="{% url 'UserMember:DangNhap' %}" id="customer_login" accept-charset="UTF-8">
+                                    {% csrf_token %}
+                                    <input name="FormType" type="hidden" value="customer_login" /><input name="utf8" type="hidden" value="true" />
+
+                                    <div class="form-signup form_hh clearfix">
+                                        <div class="form-signup text_warning margin-bottom-10">
+
+                                        </div>
+                                        <div class="row">
+
+                                            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                                                <h1 class="title_center_page title_customers"><span>Đăng nhập tài khoản</span></h1>
+                                                
+                                                <div class="content_all">
+                                                    <fieldset class="form-group content_r">
+                                                        <input type="text" placeholder="Tên tài khoản" class="form-control form-control-lg" value="" name="username" id="username" required>
+                                                    </fieldset>
+                                                    <fieldset class="form-group content_r">
+                                                        <input type="password" placeholder="Mật khẩu" class="form-control form-control-lg" value="" name="password" id="customer_password" required>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="btn_style">
+                                            <button type="submit" value="Đăng nhập" class="button_gradient btn btn-primary btn_customer">Đăng nhập</button>
+                                            <span class="recv-text"> <a id="rcv-pass" onclick="showRecoverPasswordForm();return false;">Quên mật khẩu</a></span>
+                                        </div>
+
+                                        <span class="have_ac">Bạn chưa có tài khoản, vui lòng đăng ký <a href="/account/register" style="text-decoration: underline;">tại đây</a></span>
+                                    </div>
+                                </form>
+                            </div>
+
+
+                            <div id="recover-password" class="rcv" style="display:none;">
+
+                                <div class="form-signup clearfix" style="margin-top:0px;">
+                                    <div class="recovers">
+                                        <form method="post" action="/account/recover" id="recover_customer_password" accept-charset="UTF-8">
+                                            <input name="FormType" type="hidden" value="recover_customer_password" /><input name="utf8" type="hidden" value="true" />
+                                            <div class="form-signup aaaaaaaa" style="margin-top:0px;">
+
+                                            </div>
+                                            <div class="form-signup clearfix">
+                                                <fieldset class="form-group">
+                                                    <input type="email" class="form-control form-control-lg" value="" name="Email" id="recover-email" placeholder="Nhập Email để lấy lại mật khẩu" required>
+                                                </fieldset>
+                                            </div>
+                                            <div class="action_bottom btn_style">
+                                                <button type="summit" value="Lấy lại mật khẩu" class="btn btn-primary btn_customer">Lấy lại mật khẩu </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+	/*Show hide Recoverpass*/
+	$('.recv-text #rcv-pass').click(function(){
+		$('.rcv').slideToggle('500');
+	});
+    </script>
+    {% endblock %}
+
+</body>
+</html>

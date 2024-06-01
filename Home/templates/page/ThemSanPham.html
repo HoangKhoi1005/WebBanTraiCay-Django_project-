@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm Sản Phẩm</title>
+    {% extends "pages/layout.html" %}
+    {% load static %}
+</head>
+<body>
+    {% block content %}
+    <div class="breadcrumb_background margin-bottom-40">
+        <div class="title_full">
+            <div class="container a-center">
+                <p class="title_page">Thêm sản phẩm</p>
+            </div>
+        </div>
+        <section class="bread-crumb">
+            <span class="crumb-border"></span>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 a-center">
+                        <ul class="breadcrumb">
+                            <li class="home">
+                                <a href="/"><span>Trang chủ</span></a>
+                                <span class="mr_lr">&nbsp;<i class="fa fa-angle-right"></i>&nbsp;</span>
+                            </li>
+
+                            <li><strong><span>Thêm sản phẩm</span></strong></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="container mt-5">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="TenSP">Tên Sản Phẩm</label>
+                <input type="text" class="form-control" id="TenSP" name="TenSP" required>
+            </div>
+            <div class="form-group">
+                <label for="NguonGoc">Nguồn Gốc</label>
+                <input type="text" class="form-control" id="NguonGoc" name="NguonGoc" required>
+            </div>
+            <div class="form-group">
+                <label for="MoTa">Mô Tả</label>
+                <textarea class="form-control" id="MoTa" name="MoTa" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="GiaCu">Giá Cũ</label>
+                <input type="number" step="0.01" class="form-control" id="GiaCu" name="GiaCu" required>
+            </div>
+            <div class="form-group">
+                <label for="GiaMoi">Giá Mới</label>
+                <input type="number" step="0.01" class="form-control" id="GiaMoi" name="GiaMoi" required>
+            </div>
+            <div class="form-group">
+                <label for="Anh">Ảnh</label>
+                <input type="file" class="form-control-file" id="Anh" name="Anh" required>
+            </div>
+            <div class="form-group">
+                <label for="Anh1">Ảnh 1</label>
+                <input type="file" class="form-control-file" id="Anh1" name="Anh1" required>
+            </div>
+            <div class="form-group">
+                <label for="NgayNhap">Ngày Nhập</label>
+                <input type="date" class="form-control" id="NgayNhap" name="NgayNhap" required>
+            </div>
+            <div class="form-group">
+                <label for="MaLoai">Loại Sản Phẩm</label>
+                <select class="form-control" id="MaLoai" name="MaLoai" required>
+                    {% for loai in loaiSanPhamList %}
+                    <option value="{{ loai.MaLoaiSP }}">{{ loai.TenLoaiSP }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Thêm Sản Phẩm</button>
+        </form>
+    </div>
+    {% endblock %}
+</body>
+</html>

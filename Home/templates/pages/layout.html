@@ -1,0 +1,916 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>
+        Cool Organic
+    </title>
+
+    
+
+
+    <meta name="description" content="">
+
+    <meta name="keywords" content="Cool Organic, thực phẩm hữu cơ, thuc pham huu co, fresh food, thực phẩm sạch, thuc pham sach" />
+    <link rel="canonical" href="index.html" />
+    <meta name='revisit-after' content='1 days' />
+
+    <meta name="robots" content="noodp,index,follow" />
+
+    <link rel="icon" href="{% static 'assets/favicon1615.png' %}" type="image/x-icon" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Cool Organic">
+    <meta property="og:image" content="{% static 'assets/logo1615.png' %}">
+    <meta property="og:image:secure_url" content="{% static 'assets/logo1615.png' %}">
+
+    <meta property="og:description" content="">
+    <meta property="og:url" content="index.html">
+    <meta property="og:site_name" content="Cool Organic">
+
+    <link rel="preload" as='style' type="text/css" href="{% static 'assets/font-quicksan.scss1615.css' %}">
+    <link rel="preload" as='style' type="text/css" href="{% static 'assets/plugin.scss1615.css' %}">
+    <link rel="preload" as='style' type="text/css" href="{% static 'assets/base.scss1615.css' %}">
+    <link rel="preload" as='style' type="text/css" href="{% static 'assets/style.scss1615.css' %}">
+    <link rel="preload" as='style' type="text/css" href="{% static 'assets/module.scss1615.css' %}">
+    <link rel="preload" as='style' type="text/css" href="{% static 'assets/responsive.scss1615.css' %}">
+    <link href="{% static 'assets/font-quicksan.scss1615.css' %}" rel="stylesheet" type="text/css" media="all" />
+    <link href="{% static 'assets/plugin.scss1615.css' %}" rel="stylesheet" type="text/css" media="all" />
+    <link href="{% static 'assets/base.scss1615.css' %}" rel="stylesheet" type="text/css" media="all" />
+    <link href="{% static 'assets/style.scss1615.css' %}" rel="stylesheet" type="text/css" media="all" />
+    <link href="{% static 'assets/module.scss1615.css' %}" rel="stylesheet" type="text/css" media="all" />
+    <link href="{% static 'assets/responsive.scss1615.css' %}" rel="stylesheet" type="text/css" media="all" />
+
+    <style>
+        .button_gradient {
+            background: #91ad41;
+            background-image: -moz-linear-gradient(35deg, #91ad41 0%, #ff8a6c 100%) !important;
+            background-image: -webkit-linear-gradient(35deg, #91ad41 0%, #ff8a6c 100%) !important;
+            background-image: -ms-linear-gradient(35deg, #91ad41 0%, #ff8a6c 100%) !important;
+        }
+
+        .text_gradient {
+            background: -moz-linear-gradient(35deg, #91ad41 0%, #ff8a6c 100%);
+            background: -webkit-linear-gradient(35deg, #91ad41 0%, #ff8a6c 100%);
+            background: -ms-linear-gradient(35deg, #91ad41 0%, #ff8a6c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+            -ms-background-clip: text;
+            -ms-text-fill-color: transparent;
+        }
+        .bg-header-nav .header-nav > ul.item_big > li.nav-item {
+            height:5px;
+        }
+        .bg-header-nav .header-nav > ul.item_big > li.nav-item > a {
+            height: 5px;
+        }
+
+            .bg-header-nav .header-nav > ul.item_big > li.nav-item .item_small {
+                z-index: 10000;
+               
+            }
+    </style>
+    
+
+
+    <!--<script src="{% static 'assets/stats.minbadf.js' %}"></script>-->
+    <script>
+        var template = 'index';
+    </script>
+    <link rel="preload" as="script" href="{% static 'assets/plugin_main1615.js' %}" />
+    <script src="{% static 'assets/plugin_main1615.js' %}" type="text/javascript"></script>
+</head>
+<body>
+    <div class="opacity_menu"></div>
+    <!-- Main content -->
+    <!-- Menu mobile -->
+    <div id="mySidenav" class="sidenav menu_mobile hidden-md hidden-lg">
+        <div class="top_menu_mobile">
+            <span class="close_menu">
+            </span>
+        </div>
+        <div class="content_memu_mb">
+            <div class="link_list_mobile">
+
+                <ul class="ct-mobile hidden">
+                </ul>
+                <ul class="ct-mobile">
+
+                    <li class="level0 level-top parent level_ico">
+                        <a href="{% url 'UserMember:index' %}">Trang chủ</a>
+
+                    </li>
+
+                    <li class="level0 level-top parent level_ico">
+                        <a href="gioi-thieu.html">Giới thiệu</a>
+
+                    </li>
+
+                    <li class="level0 level-top parent level_ico">
+                        <a href="{% url 'UserMember:SanPham' %}">Sản phẩm</a>
+
+                        <i class="ti-plus hide_close"></i>
+                        <ul class="level0 sub-menu" style="display:none;">
+
+                            <li class="level1">
+                                <a href="rau-cu.html"><span>Rau củ</span></a>
+
+                            </li>
+
+                            <li class="level1">
+                                <a href="hoa-qua.html"><span>Hoa quả</span></a>
+
+                            </li>
+
+                            <li class="level1">
+                                <a href="hai-san.html"><span>Hải sản</span></a>
+
+                            </li>
+
+                            <li class="level1">
+                                <a href="cac-loai-hat.html"><span>Các loại hạt</span></a>
+
+                            </li>
+
+                            <li class="level1">
+                                <a href="thuc-pham-tuoi-song.html"><span>Thực phẩm tươi sống</span></a>
+
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li class="level0 level-top parent level_ico">
+                        <a href="tin-tuc.html">Tin tức</a>
+
+                    </li>
+
+                    <li class="level0 level-top parent level_ico">
+                        <a href="lien-he.html">Liên hệ</a>
+
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End -->
+    <!-- HEADER NEW -->
+    <header class="header header_s">
+        <div class="mid-header wid_100">
+            <div class="container">
+                <div class="row">
+                    <div class="content_header">
+                        <div class="header-main">
+                            <div class="menu-bar-h nav-mobile-button hidden-md hidden-lg">
+                                <i class="fas fa-bars"></i>
+                            </div>
+                            <div class="col-lg-3 col-md-3">
+                                <div class="logo logo_centers">
+                                    <a href="{% url 'UserMember:index' %}" class="logo-wrapper">
+                                        <img src="{% static 'assets/logo.jpg' %}" alt="logo Cool Organic">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="wrap_main hidden-xs hidden-sm">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="bg-header-nav hidden-xs hidden-sm">
+                                                <div class="row row-noGutter-2">
+                                                    <nav class="header-nav">
+                                                        <ul class="item_big">
+                                                            <li class="nav-item active">
+                                                                <a class="a-img" href="{% url 'UserMember:index' %}">
+                                                                    <span>Trang chủ</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="a-img" href="{% url 'UserMember:GioiThieu' %}">
+                                                                    <span>Giới thiệu</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="a-img" href="{% url 'UserMember:SanPham' %}">
+                                                                    <span>Sản phẩm</span><i class="fa fa-caret-down"></i>
+                                                                </a>
+                                                                <ul class="item_small hidden-sm hidden-xs" style="margin-top:100px">
+                                                                    {% for loai in loaiSanPhamList %}
+                                                                    <li><a href="{% url 'UserMember:SanPham' %}?loai={{ loai.MaLoaiSP }}" title="">{{ loai.TenLoaiSP }}</a></li>
+                                                                    {% endfor %}
+                                                                </ul>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="a-img" href="{% url 'UserMember:TinTuc' %}">
+                                                                    <span>Tin tức</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="a-img" href="{% url 'UserMember:LienHe' %}">
+                                                                    <span>Liên hệ</span>
+                                                                </a>
+                                                            </li>
+                                                            {% if user.is_authenticated and user.is_superuser %}
+                                                            <li class="nav-item">
+                                                                <a class="a-img" href="{% url 'UserMember:quanLyDanhMuc' %}">
+                                                                    <span>Quản lý loại</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="a-img" href="{% url 'UserMember:quanLySanPham' %}">
+                                                                    <span>Quản lý sản phẩm</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="a-img" href="">
+                                                                    <span>Quản lý tài khoản</span>
+                                                                </a>
+                                                            </li>
+                                                            {% endif %}
+                                                        </ul>
+                                                    </nav>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 padding-0">
+                                <div class="cartgroup">
+                                    <div class="searchion inline-b">
+                                        <span class="visible_index nn"><i class="fas fa-search"></i></span>
+                                        <div class="searchmini">
+                                            <form action="{% url 'UserMember:SanPham' %}" method="post" class="input-group search-bar" role="search">
+                                                {% csrf_token %}
+                                                <input type="text" name="keyword" value="" autocomplete="off" placeholder="Tìm kiếm..." class="button_gradient input-group-field auto-search visible_index">
+                                                <button type="submit" class="visible_index btn icon-fallback-text">
+                                                    <span class="fa fa-search"></span>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="inline-b group_accout visible_index">
+                                        {% if user.is_authenticated %}
+                                        <i class="fas fa-user"></i>
+                                        <span style="color: black">Xin chào! {{ user.username }}</span>
+                                        <div class="groupc">
+                                            <a class="btn button_gradient" href="{% url 'UserMember:DangXuat' %}">Đăng xuất</a>
+                                            <a href="{% url 'UserMember:register' %}">Đăng ký</a>
+                                        </div>
+                                        {% else %}
+                                        <i class="fas fa-user-plus"></i>
+                                        <div class="groupc">
+                                            <a class="btn button_gradient" href="{% url 'UserMember:DangNhap' %}">Đăng nhập</a>
+                                            <a href="{% url 'UserMember:register' %}">Đăng ký</a>
+                                        </div>
+                                        {% endif %}
+                                    </div>
+
+                                    <div class="header-right inline-block">
+                                        <div class="top-cart-contain f-right">
+                                            <div class="mini-cart text-xs-center">
+                                                <div class="heading-cart cart_header">
+                                                    <a class="img_hover_cart" href="{% url 'UserMember:dsSPGioHang' %}" title="Giỏ hàng">
+                                                        <div class="icon_hotline visible_index">
+                                                            <i class="fas fa-shopping-basket"></i>
+                                                            <span class="count_item count_item_pr button_gradient">{{ so_luong_san_pham }}</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="top-cart-content hidden-xs hidden-sm hidden-md">
+                                                    <ul id="cart-sidebar" class="mini-products-list count_li">
+                                                        <li class="list-item">
+                                                            <ul></ul>
+                                                        </li>
+                                                        <li class="action">
+                                                            <ul>
+                                                                <li class="li-fix-1">
+                                                                    <div class="top-subtotal">
+                                                                        Tổng tiền thanh toán:
+                                                                        <span class="price"></span>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="li-fix-2">
+                                                                    <div class="actions">
+                                                                        <a href="{% url 'UserMember:dsSPGioHang' %}" class="btn btn-primary" title="Giỏ hàng">
+                                                                            <span>Giỏ hàng</span>
+                                                                        </a>
+                                                                        <a href="{% url 'UserMember:dsSPGioHang' %}" class="btn btn-checkout btn-gray" title="Thanh toán">
+                                                                            <span>Thanh toán</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="top-cart-contain f-right hidden">
+                                            <div class="mini-cart text-xs-center">
+                                                <div class="heading-cart">
+                                                    <a class="bg_cart" href="cart.html" title="Giỏ hàng">
+                                                        <i class="ion-android-cart"></i>
+                                                        <span class="count_item count_item_pr"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="main">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <div class="site-footer">
+        <div class="new-letter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="letter-left heading">
+                            <h3>Đăng kí nhận tin khuyến mãi</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+
+
+
+                        <form action="https://sapo.us19.list-manage.com/subscribe/post?u=2887dcda77021868cccd236ea&amp;id=7ace19f37b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+                            <div class="input-group">
+                                <input type="email" autocomplete="off" class="form-control" value="" placeholder="Nhập email của bạn" name="EMAIL" id="mail">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary button_gradient" name="subscribe" id="subscribe" type="submit">Đăng ký</button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+
+        <div class="mid-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <div class="widget_first_childs margin-top-50">
+                            <div class="logo_footer" style="margin-bottom: 12px;">
+                                <a href="{% url 'UserMember:index' %}" class="logo-wrapper">
+                                    <img src="{% static 'assets/logo.jpg' %}" alt="logo ">
+                                </a>
+                            </div>
+                            <div class="widget-ft-top">
+                                <h4 class="title-menu-top hidden">
+                                    <span>
+                                        Hỗ trợ mua hàng
+                                    </span>
+                                </h4>
+                                <div class="hotline_footer">
+                                    <ul class="contact padding-0">
+                                        <li class="li_footer_h">
+                                            <span class="txt_content_child">
+                                                <i class="fas fa-map-marker-alt"></i>
+                                                <span class="add">
+
+                                                    140 Đ. Lê Trọng Tấn, Tây Thạnh, Tân Phú, Thành phố Hồ Chí Minh
+
+                                                </span>
+                                            </span>
+                                        </li>
+                                        <li class="li_footer_h">
+                                            <span class="txt_content_childs">
+
+
+                                                <i class="fas fa-mobile-alt"></i> <a class="hai01" href="tel:19006750">0123456789</a>
+
+                                            </span>
+                                        </li>
+                                        <li class="li_footer_h">
+                                            <span class="txt_content_childs">
+
+                                                <i class="far fa-envelope"></i> <a href="#">Nhom5Team@gmail.com</a>
+
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                <div class="widget-ft first">
+                                    <h4 class="title-menu">
+                                        <a role="button" class="collapsed" data-toggle="collapse" aria-expanded="false" data-target="#collapseListMenu01" aria-controls="collapseListMenu01">
+                                            Cẩm nang sử dụng <i class="fa fa-plus" aria-hidden="true"></i>
+                                        </a>
+                                    </h4>
+                                    <div class="collapse" id="collapseListMenu01">
+                                        <ul class="list-menu">
+
+                                            <li class="li_menu"><a title="Trang chủ" href="{% url 'UserMember:index' %}">Trang chủ</a></li>
+
+                                            <li class="li_menu"><a title="Giới thiệu" href="{% url 'UserMember:GioiThieu' %}">Giới thiệu</a></li>
+
+                                            <li class="li_menu"><a title="Sản phẩm" href="{% url 'UserMember:SanPham' %}">Sản phẩm</a></li>
+
+                                            <li class="li_menu"><a title="Tin tức" href="{% url 'UserMember:TinTuc' %}">Tin tức</a></li>
+
+                                            <li class="li_menu"><a title="Liên hệ" href="{% url 'UserMember:LienHe' %}">Liên hệ</a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                <div class="widget-ft">
+                                    <h4 class="title-menu">
+                                        <a role="button" class="collapsed" data-toggle="collapse" aria-expanded="false" data-target="#collapseListMenu02" aria-controls="collapseListMenu02">
+                                            Chính sách <i class="fa fa-plus" aria-hidden="true"></i>
+                                        </a>
+                                    </h4>
+                                    <div class="collapse time_work" id="collapseListMenu02">
+                                        <ul class="list-menu">
+
+                                            <li class="li_menu"><a title="Trang chủ" href="{% url 'UserMember:index' %}">Trang chủ</a></li>
+
+                                            <li class="li_menu"><a title="Giới thiệu" href="{% url 'UserMember:GioiThieu' %}">Giới thiệu</a></li>
+
+                                            <li class="li_menu"><a title="Sản phẩm" href="{% url 'UserMember:SanPham' %}">Sản phẩm</a></li>
+
+                                            <li class="li_menu"><a title="Tin tức" href="{% url 'UserMember:TinTuc' %}">Tin tức</a></li>
+
+                                            <li class="li_menu"><a title="Liên hệ" href="{% url 'UserMember:LienHe' %}">Liên hệ</a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                <div class="widget-ft">
+                                    <h4 class="title-menu">
+                                        <a role="button" class="collapsed" data-toggle="collapse" aria-expanded="false" data-target="#collapseListMenu03" aria-controls="collapseListMenu03">
+                                            Dịch vụ <i class="fa fa-plus" aria-hidden="true"></i>
+                                        </a>
+                                    </h4>
+                                    <div class="collapse time_work" id="collapseListMenu03">
+                                        <ul class="list-menu">
+
+                                            <li class="li_menu"><a title="Trang chủ" href="{% url 'UserMember:index' %}">Trang chủ</a></li>
+
+                                            <li class="li_menu"><a title="Giới thiệu" href="{% url 'UserMember:GioiThieu' %}">Giới thiệu</a></li>
+
+                                            <li class="li_menu"><a title="Sản phẩm" href="{% url 'UserMember:SanPham' %}">Sản phẩm</a></li>
+
+                                            <li class="li_menu"><a title="Tin tức" href="{% url 'UserMember:TinTuc' %}">Tin tức</a></li>
+
+                                            <li class="li_menu"><a title="Liên hệ" href="{% url 'UserMember:LienHe' %}">Liên hệ</a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-footer-bottom copyright clearfix">
+            <div class="container">
+                <div class="inner clearfix">
+                    <div class="row tablet">
+                        <div id="copyright" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 a-center fot_copyright">
+
+                            <span class="wsp">
+                                <span class="mobile">@ Bản quyền thuộc về <b>Nhóm 5</b></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" id="back-to-top" class="backtop" title="Lên đầu trang">
+                    <div class="border_btt">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </footer>
+    <!-- Bizweb javascript -->
+    <script src="{% static 'assets/option-selectors.js' %}" type="text/javascript"></script>
+    <script src="{% static 'assets/api.jquery.js' %}" type="text/javascript"></script>
+
+    <div id="quick-view-product" class="quickview-product" style="display:none;">
+        <div class="quickview-overlay fancybox-overlay fancybox-overlay-fixed"></div>
+        <div class="quick-view-product"></div>
+        <div id="quickview-modal" style="display:none;">
+            <div class="block-quickview primary_block row details-product">
+
+                <div class="product-left-column col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="clearfix image-block">
+                        <span class="view_full_size">
+                            <a class="img-product a_flex_logo" title="" href="#">
+                                <img id="product-featured-image-quickview" class="img-responsive product-featured-image-quickview" src="{% static 'assets/logo1615.png' %}" alt="quickview" />
+                            </a>
+                        </span>
+                        <div class="loading-imgquickview" style="display:none;"></div>
+                    </div>
+                    <div class="more-view-wrapper clearfix">
+                        <div class="thumbs_quickview" id="thumbs_list_quickview">
+                            <ul class="product-photo-thumbs quickview-more-views-owlslider" id="thumblist_quickview"></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-center-column product-info product-item col-xs-6 col-sm-6 col-md-6 col-lg-6 details-pro">
+                    <h3 class="qwp-name title-product">abc</h3>
+                    <div class="head-qv group-status">
+                        <div class="vend-qv">
+                            <div class="left_vend">
+                                <div class="vend-qv">
+                                    <div class="left_vend">
+                                        <span class="vendor_"></span>
+                                        <span class="line">|</span>
+                                        Tình trạng: <span class="soluong1"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="prices price-box">
+                        <span class="price product-price"></span>
+                        <del class="old-price"></del>
+                    </div>
+                    <div class="product-description product-summary">
+                        <div class="rte">
+
+                        </div>
+                    </div>
+
+                    <form action="https://cool-organic.mysapo.net/cart/add" method="post" enctype="multipart/form-data" class="quick_option variants form-ajaxtocart form-product">
+                        <span class="price-product-detail hidden" style="opacity: 0;">
+                            <span class=""></span>
+                        </span>
+                        <select name='variantId' class="hidden" style="display:none"></select>
+
+                        <div class="quantity_wanted_p">
+                            <div class="soluong_qv form-group form_product_content">
+
+                                <div class="input_qty_qv_ soluong">
+                                    <span class="header_qv label_sl">Số lượng: </span>
+                                    <div class="input_qty_qvs input_number_product custom-btn-number">
+                                        <button class="btn_num num_1 button button_qty" onClick="var result = document.getElementById('quantity-detail'); var qtyqv = result.value; if( !isNaN( qtyqv ) &amp;&amp; qtyqv &gt; 1 ) result.value--;return false;">-</button>
+                                        <input type="text" id="quantity-detail" name="quantity" value="1" maxlength="2" class="form-control prd_quantity" onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;" onchange="if(this.value == 0)this.value=1;">
+                                        <button class="btn_num num_2 button button_qty" onClick="var result = document.getElementById('quantity-detail'); var qtyqv = result.value; if( !isNaN( qtyqv )) result.value++;return false;">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="button_actions clearfix">
+                                <button type="submit" class="button_gradient btn_cool btn btn_base fix_add_to_cart ajax_addtocart btn_add_cart btn-cart add_to_cart add_to_cart_detail">
+                                    <span class="btn-content">Thêm vào giỏ hàng</span>
+                                </button>
+
+                            </div>
+                        </div>
+
+
+                    </form>
+                    <div class="call_phone_buy f-left w_100">
+                        <div>
+                            <span>
+                                Gọi đặt mua: <a href="tel:19006750">
+                                    19006750
+                                </a> để nhanh chóng đặt hàng
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <a title="Close" class="quickview-close close-window" href="javascript:;"><i class="fas fa-times"></i></a>
+        </div>
+    </div>
+   
+    <link rel="preload" as="script" href="{% static 'assets/quickview1615.js' %}" />
+    <script type="text/javascript" defer src="{% static 'assets/quickview1615.js' %}"></script>
+
+    <link rel="preload" as="script" href="{% static 'assets/main1615.js' %}" />
+    <script src="{% static 'assets/main1615.js' %}" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        WebFontConfig = {
+            custom: {
+                families: ['FontAwesome'],
+                urls: ['https://use.fontawesome.com/releases/v5.7.2/css/all.css']
+            }
+        };
+        (function () {
+            var wf = document.createElement('script');
+            wf.src = '{% static 'assets/webfont.js' %}';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+        })();
+    </script>
+    <!-- Add to cart -->
+    <div class="ajax-load">
+        <span class="loading-icon">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+            <rect x="0" y="10" width="4" height="10" fill="#333" opacity="0.2">
+            <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0s" dur="0.6s" repeatCount="indefinite" />
+            <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0s" dur="0.6s" repeatCount="indefinite" />
+            <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0s" dur="0.6s" repeatCount="indefinite" />
+			</rect>
+            <rect x="8" y="10" width="4" height="10" fill="#333" opacity="0.2">
+            <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+            <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+            <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+			</rect>
+            <rect x="16" y="10" width="4" height="10" fill="#333" opacity="0.2">
+            <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+            <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+            <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+			</rect>
+		</svg>
+        </span>
+    </div>
+
+    <div class="loading awe-popup">
+        <div class="overlay"></div>
+        <div class="loader" title="2">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+            <rect x="0" y="10" width="4" height="10" fill="#333" opacity="0.2">
+            <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0s" dur="0.6s" repeatCount="indefinite" />
+            <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0s" dur="0.6s" repeatCount="indefinite" />
+            <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0s" dur="0.6s" repeatCount="indefinite" />
+			</rect>
+            <rect x="8" y="10" width="4" height="10" fill="#333" opacity="0.2">
+            <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+            <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+            <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+			</rect>
+            <rect x="16" y="10" width="4" height="10" fill="#333" opacity="0.2">
+            <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+            <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+            <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+			</rect>
+		</svg>
+        </div>
+
+    </div>
+
+    <div class="addcart-popup product-popup awe-popup">
+        <div class="overlay no-background"></div>
+        <div class="content">
+            <div class="row row-noGutter">
+                <div class="col-xl-6 col-xs-12">
+                    <div class="btn btn-full btn-primary a-left popup-title">
+                        <i class="fa fa-check"></i>Thêm vào giỏ hàng thành công
+                    </div>
+                    <a href="javascript:void(0)" class="close-window close-popup"><i class="fa fa-close"></i></a>
+                    <div class="info clearfix">
+                        <div class="product-image margin-top-5">
+                            <img alt="popup" src="{% static 'assets/logo1615.png' %}" style="max-width:150px; height:auto" />
+                        </div>
+                        <div class="product-info">
+                            <p class="product-name"></p>
+                            <p class="quantity color-main"><span>Số lượng: </span></p>
+                            <p class="total-money color-main"><span>Tổng tiền: </span></p>
+
+                        </div>
+                        <div class="actions">
+                            <button class="btn  btn-primary  margin-top-5 btn-continue">Tiếp tục mua hàng</button>
+                            <button class="btn btn-gray margin-top-5" onclick="window.location='cart.html'">Kiểm tra giỏ hàng</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="error-popup awe-popup">
+        <div class="overlay no-background"></div>
+        <div class="popup-inner content">
+            <div class="error-message"></div>
+        </div>
+    </div>
+    <div id="popup-cart" class="hidden" role="dialog">
+        <div id="popup-cart-desktop" class="clearfix">
+            <div class="title-popup-cart">
+                <i class="fa fa-check" aria-hidden="true"></i> Bạn đã thêm <span class="cart-popup-name" style="color: red;"></span> vào giỏ hàng
+            </div>
+
+            <div class="content-popup-cart">
+                <div class="thead-popup">
+                    <div style="width: 54%;" class="text-left">Sản phẩm</div>
+                    <div style="width: 15%;" class="text-center">Đơn giá</div>
+                    <div style="width: 15%;" class="text-center">Số lượng</div>
+                    <div style="width: 15%;" class="text-center">Thành tiền</div>
+                </div>
+                <div class="tbody-popup">
+                </div>
+                <div class="tfoot-popup">
+                    <div class="tfoot-popup-1 clearfix">
+                        <div class="pull-left popup-ship">
+                            <div class="title-quantity-popup">
+                                <a href="cart.html">
+                                    Giỏ hàng của bạn <i>(<b class="cart-popup-count"></b> sản phẩm)</i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="pull-right popup-total">
+                            <p>Thành tiền: <span class="total-price"></span></p>
+                        </div>
+                    </div>
+                    <div class="tfoot-popup-2 clearfix">
+                        <a class="button btn-proceed-checkout" title="Tiến hành đặt hàng" href="cart.html"><span>Tiến hành đặt hàng</span></a>
+                        <a class="button btn btn-gray btn-continue" title="Tới giỏ hàng" href="cart.html"><span><span>Tới giỏ hàng</span></span></a>
+                    </div>
+                </div>
+            </div>
+            <a title="Close" class="quickview-close close-window" href="javascript:;" onclick="$('#popup-cart').modal('hide');"><i class="fa  fa-times-circle"></i></a>
+        </div>
+
+    </div>
+    <div id="myModal" class="modal fade" role="dialog">
+    </div>
+    <!--<div id="popupCartModal" class="modal fade" role="dialog">
+    </div>-->
+    <!--<script src="{% static 'assets/cs.script1615.js' %}" type="text/javascript"></script>-->
+    <!--<script src="{% static 'assets/api-jquery-custom1615.js' %}" type="text/javascript"></script>-->
+    <script type="text/javascript" src="{% static 'bootstrap-5.3.3-dist/js/bootstrap.js' %}"></script>
+    <script>
+        $(document).ready(function () {
+            updateCartCount();
+
+            function updateCartCount() {
+                $.ajax({
+                    url: "{% url 'UserMember:soLuongSP' %}",
+                    method: "GET",
+                    success: function (response) {
+                        $('.count_item').text(response.so_luong_san_pham);
+                    },
+                    error: function () {
+                        console.error('Lỗi khi cập nhật số lượng sản phẩm.');
+                    }
+                });
+            }
+
+        });
+
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            // Xử lý sự kiện click vào nút "Mua ngay"
+            $('.add_to_cart').click(function (e) {
+                e.preventDefault(); // Ngăn chặn hành động mặc định của nút
+
+                var productId = $(this).closest('.variants').find('input[name="variantId"]').val();
+                var product_name = $(this).closest('.product-box-h').find('.product-name a').text();
+                var product_price = $(this).closest('.product-box-h').find('.product-price').text();
+
+                var csrftoken = $("[name=csrfmiddlewaretoken]").val();
+                // Gửi yêu cầu thêm sản phẩm vào giỏ hàng bằng AJAX
+                $.ajax({
+                    url: "{% url 'UserMember:add_to_cart' %}",
+                    type: 'POST',
+                    data: {
+                        'variantId': productId,
+                        'csrfmiddlewaretoken': csrftoken// Thay 'productId' bằng biến chứa ID sản phẩm tương ứng
+                    },
+                    success: function (response) {
+                        // Xác nhận rằng sản phẩm đã được thêm vào giỏ hàng và hiển thị popup
+                        if (response.success) {
+                            var tongTien = response.tongTien;
+                            var anh = response.anh;
+                            showPopup(product_name, product_price, tongTien, anh);
+                            updateCartCount();
+                        }
+                    },
+                    error: function (xhr, errmsg, err) {
+                        // Xử lý lỗi nếu cần
+                    }
+                });
+            });
+
+            $('body').on('click', '.close', function () {
+                closePopup();
+            });
+
+            // Xử lý sự kiện click ra ngoài phạm vi của popup
+            $(document).on('click', function (e) {
+                // Kiểm tra xem phần tử được nhấp có phải là phần tử popup hay không
+                if (!$(e.target).closest('.modal-content').length) {
+                    // Nếu không phải, đóng popup
+                    closePopup();
+                }
+            });
+
+        });
+
+        function updateCartCount() {
+            $.ajax({
+                url: "{% url 'UserMember:soLuongSP' %}",
+                method: "GET",
+                success: function (response) {
+                    $('.count_item').text(response.so_luong_san_pham);
+                },
+                error: function () {
+                    console.error('Lỗi khi cập nhật số lượng sản phẩm.');
+                }
+            });
+        }
+
+        function showPopup(product_name, product_price, product_tongTien, anh) {
+            // Tạo nội dung HTML cho popup
+            product_tongTien = formatPriceVND(product_tongTien.replace('đ', '').trim());
+            var popup_content = '<div id="popupCartModal" class="modal fade in" role="dialog" style="display: block; padding-right: 16px;">' +
+                '<div class="popup_overlay"></div>' + // Lớp phủ mờ
+                '<div class="modal-dialog">' +
+                '<div class="modal-content">' +
+                '<button type="button" class="close" data-dismiss="modal" data-backdrop="false" aria-label="Close" style="position: relative; z-index: 9;"><span aria-hidden="true">×</span></button>' +
+                '<div class="row row-noGutter">' +
+                '<div class="modal-left col-sm-6">' +
+                '<h3 class="title"><i class="fa fa-check"></i> Sản phẩm đã được thêm vào giỏ hàng</h3>' +
+                '<div class="modal-body">' +
+                '<div class="media">' +
+                '<div class="media-left">' +
+                '<div class="thumb-1x1">' +
+                '<img src="/static/' + anh + '" alt="' + product_name + '">' +
+                '</div>' +
+                '</div>' +
+                '<div class="media-body">' +
+                '<div class="product-title">' + product_name + '</div>' +
+                '<div class="product-new-price format-price"><span>' + product_price + '</span></div>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '<div class="modal-right col-sm-6">' +
+                '<h3 class="title"><a href="/cart"><ion-icon name="cart"></ion-icon> Giỏ hàng của bạn </a></h3>' +
+                '<div class="total_price">' +
+                '<div class="total_price_h">Tổng tiền:</div>' +
+                '<div class="price format-price">' + product_tongTien + '</div>' +
+                '</div>' +
+                '<a href="/checkout" class="btn btn-red button_gradient">Tiến hành thanh toán</a>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '</div>';
+
+            // Hiển thị popup và lớp phủ mờ
+            $('body').append(popup_content);
+            $('body').append('<div class="modal-backdrop fade in"></div>');
+        }
+
+        function closePopup() {
+            $('#popupCartModal').remove();
+            $('.modal-backdrop').remove(); // Loại bỏ lớp này để ẩn lớp phủ mờ
+        }
+
+
+        function formatPriceVND(price) {
+            return parseFloat(price).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " đ";
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var prices = document.querySelectorAll('.format-price');
+            prices.forEach(function (priceElement) {
+                var priceValue = parseFloat(priceElement.textContent);
+                if (!isNaN(priceValue)) {
+                    priceElement.textContent = formatPriceVND(priceValue);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

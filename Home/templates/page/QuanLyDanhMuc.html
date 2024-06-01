@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Quản lý danh mục</title>
+    {% extends "pages/layout.html" %}
+    {% load static %}
+</head>
+<body>
+
+    {% block content %}
+    <div class="breadcrumb_background margin-bottom-40">
+        <div class="title_full">
+            <div class="container a-center">
+                <p class="title_page">Quản lý danh mục</p>
+            </div>
+        </div>
+        <section class="bread-crumb">
+            <span class="crumb-border"></span>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 a-center">
+                        <ul class="breadcrumb">
+                            <li class="home">
+                                <a href="/"><span>Trang chủ</span></a>
+                                <span class="mr_lr">&nbsp;<i class="fa fa-angle-right"></i>&nbsp;</span>
+                            </li>
+                            <li><strong><span>Quản lý danh mục</span></strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <button type="button" class="btn btn-primary" id="add-category-btn" style=" background: #1395e4;">Thêm loại sản phẩm</button>
+    <table class="table table-bordered table-striped table-hover table-sm">
+        <thead>
+            <tr>
+                <th scope="col">Mã loại sản phẩm</th>
+                <th scope="col">Tên loại sản phẩm</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for loai in dsLoaiSP %}
+            <tr>
+                <th scope="row">{{ loai.MaLoaiSP }}</th>
+                <td>{{ loai.TenLoaiSP }}</td>
+                <td>
+                    <button type="button" class="btn btn-danger btn-delete" data-id="{{ loai.MaLoaiSP }}">Xóa loại</button>
+                    <button type="button" class="btn btn-warning btn-edit" data-id="{{ loai.MaLoaiSP }}">Sửa loại</button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="text-right">
+        <nav class="clearfix nav_pagi f-left w_100">
+            <ul class="pagination clearfix">
+                {% if dsLoaiSP.has_previous %}
+                <li class="page-item"><a class="page-link" href="?page=1"><i class="fas fa-angle-double-left"></i></a></li>
+                <li class="page-item"><a class="page-link" href="?page={{ dsLoaiSP.previous_page_number }}"><i class="fas fa-angle-left"></i></a></li>
+                {% else %}
+                <li class="page-item disabled"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
+                {% endif %}
+                {% for page_num in dsLoaiSP.paginator.page_range %}
+                {% if dsLoaiSP.number == page_num %}
+                <li class="page-item active"><a class="page-link" href="#">{{ page_num }}</a></li>
+                {% elif page_num > dsLoaiSP.number|add:'-3' and page_num < dsLoaiSP.number|add:'3' %}
+                <li class="page-item"><a class="page-link" href="?page={{ page_num }}">{{ page_num }}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% if dsLoaiSP.has_next %}
+                <li class="page-item"><a class="page-link" href="?page={{ dsLoaiSP.next_page_number }}"><i class="fas fa-angle-right"></i></a></li>
+                <li class="page-item"><a class="page-link" href="?page={{ dsLoaiSP.paginator.num_pages }}"><i class="fas fa-angle-double-right"></i></a></li>
+                {% else %}
+                <li class="page-item disabled"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+
+    <script>
+        document.getElementById("add-category-btn").addEventListener("click", function () {
+            window.location.href = "{% url 'UserMember:themDanhMuc' %}";
+        });
+
+        document.querySelectorAll(".btn-edit").forEach(function (button) {
+            button.addEventListener("click", function () {
+                var id = this.getAttribute("data-id");
+                window.location.href = "{% url 'UserMember:suaDanhMuc' 0 %}".replace('0', id);
+            });
+        });
+
+        document.querySelectorAll(".btn-delete").forEach(function (button) {
+            button.addEventListener("click", function () {
+                var id = this.getAttribute("data-id");
+                window.location.href = "{% url 'UserMember:xoaDanhMuc' 0 %}".replace('0', id);
+            });
+        });
+    </script>
+    {% endblock %}
+</body>
+</html>

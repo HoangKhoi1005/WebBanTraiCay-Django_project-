@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    {% extends "pages/layout.html" %}
+    {% load static %}
+    <style>
+        
+        .modal-backdrop {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1040;
+            background-color: #000;
+        }
+            
+    </style>
+</head>
+<body>
+    {% block content %}
+    <div class="breadcrumb_background margin-bottom-40">
+        <div class="title_full">
+            <div class="container a-center">
+                <p class="title_page">{{ten_loai}}</p>
+            </div>
+        </div>
+        <section class="bread-crumb">
+            <span class="crumb-border"></span>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 a-center">
+                        <ul class="breadcrumb">
+                            <li class="home">
+                                <a href="/"><span>Trang chủ</span></a>
+                                <span class="mr_lr">&nbsp;<i class="fa fa-angle-right"></i>&nbsp;</span>
+                            </li>
+
+
+                            <li><strong><span> {{ten_loai}}</span></strong></li>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="bg_collection collection_2">
+
+                <div class="main_container col-lg-12 padding-col-left-0">
+                    <div class="category-products products f-left w_100">
+
+
+                        <div class="sortPagiBar">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
+                                    <div class="box-heading relative">
+                                        <h1 class="title-head margin-top-0">Tất cả sản phẩm</h1>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9">
+                                    <div class="bg-white sort-cate clearfix">
+
+                                        <div class="sort-cate-left hidden-xs">
+
+                                            <h3>Sắp xếp theo:</h3>
+                                            <ul class="sort-options">
+                                                <li class="btn-quick-sort position-desc">
+                                                    <a href="?sort=NgayMoi"><i></i>Hàng mới về</a>
+                                                </li>
+                                                <li class="btn-quick-sort position-asc">
+                                                    <a href="?sort=NgayCu"><i></i>Hàng cũ nhất</a>
+                                                </li>
+                                                <li class="btn-quick-sort price-asc">
+                                                    <a href="?sort=GiaTang"><i></i>Giá tăng dần</a>
+                                                </li>
+                                                <li class="btn-quick-sort price-desc">
+                                                    <a href="?sort=GiaGiam"><i></i>Giá giảm dần</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="sort-cate-right-mobile hidden-lg hidden-md hidden-sm">
+                                            <div id="sort-by">
+                                                <label class="left">Sắp xếp: </label>
+                                                <ul>
+                                                    <li>
+                                                        <span>Thứ tự</span>
+                                                        <ul>
+                                                            <li><a href="javascript:;" onclick="sortby('created-desc')">Hàng mới về</a></li>
+                                                            <li><a href="javascript:;" onclick="sortby('created-asc')">Hàng cũ nhất</a></li>
+                                                            <li><a href="javascript:;" onclick="sortby('price-asc')">Giá tăng dần</a></li>
+                                                            <li><a href="javascript:;" onclick="sortby('price-desc')">Giá giảm dần</a></li>
+
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <section class="products-view products-view-grid">
+                            <div class="row">
+                                {% for product in dsSanPham %}
+                                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+
+                                    <div class="product-box-h product-base">
+                                        <div class="product-thumbnail">
+                                            <a class="image_link display_flex" href="{% url 'UserMember:chiTietSP' product_id=product.MaSP %}" title="{{ product.TenSP }}">
+                                                <img class="lazyload" src="{% static product.Anh %}" alt="{{ product.TenSP }}">
+                                            </a>
+                                            <div class="product-action clearfix hidden-xs">
+                                                <form action="/cart/add/" method="post" class="variants form-nut-grid" data-id="product-actions-{{ product.MaSP }}" enctype="multipart/form-data">
+                                                    {% csrf_token %}
+                                                    <div class="group_action">
+                                                        <input type="hidden" name="variantId" value="{{ product.MaSP }}" />
+                                                        <button class="btn-buy btn-cart btn btn-circle left-to add_to_cart " title="Mua ngay">
+                                                        </button>
+                                                        <a title="Xem nhanh" href="/SanPham/Detail/{{ product.MaSP }}" data-handle="{{ product.TenSP }}" class="xem_nhanh btn-circle btn_view btn right-to quick-view hidden-xs hidden-sm hidden-md"></a>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="product-info a-left">
+                                            <h3 class="product-name"><a href="/SanPham/Detail/{{ product.MaSP }}" title="{{ product.TenSP }}">{{ product.TenSP }}</a></h3>
+                                            <div class="product-hideoff">
+                                                <div class="product-hide">
+                                                    <div class="price-box clearfix">
+                                                        <div class="special-price">
+                                                            <span class="price product-price format-price">{{ product.GiaMoi|floatformat }} đ</span>
+                                                        </div>
+                                                        <div class="old-price">
+                                                            <span class="price product-price-old format-price">{{ product.GiaCu|floatformat }} đ</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                {% endfor %}
+
+
+
+
+                            </div>
+                            <div class="text-right">
+                                <nav class="clearfix nav_pagi f-left w_100">
+                                    <ul class="pagination clearfix">
+                                        {% if dsSanPham.has_previous %}
+                                        <li class="page-item"><a class="page-link" href="?{% if ma_loai %}loai={{ ma_loai }}&{% elif sort %}sort={{ sort }}&{% endif %}page=1"><i class="fas fa-angle-double-left"></i></a></li>
+                                        <li class="page-item"><a class="page-link" href="?{% if ma_loai %}loai={{ ma_loai }}&{% elif sort %}sort={{ sort }}&{% endif %}page={{ dsSanPham.previous_page_number }}"><i class="fas fa-angle-left"></i></a></li>
+                                        {% else %}
+                                        <li class="page-item disabled"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
+                                        {% endif %}
+                                        {% for page_num in dsSanPham.paginator.page_range %}
+                                        {% if dsSanPham.number == page_num %}
+                                        <li class="page-item active"><a class="page-link" href="#">{{ page_num }}</a></li>
+                                        {% elif page_num > dsSanPham.number|add:'-3' and page_num < dsSanPham.number|add:'3' %}
+                                        <li class="page-item"><a class="page-link" href="?{% if ma_loai %}loai={{ ma_loai }}&{% elif sort %}sort={{ sort }}&{% endif %}page={{ page_num }}">{{ page_num }}</a></li>
+                                        {% endif %}
+                                        {% endfor %}
+                                        {% if dsSanPham.has_next %}
+                                        <li class="page-item"><a class="page-link" href="?{% if ma_loai %}loai={{ ma_loai }}&{% elif sort %}sort={{ sort }}&{% endif %}page={{ dsSanPham.next_page_number }}"><i class="fas fa-angle-right"></i></a></li>
+                                        <li class="page-item"><a class="page-link" href="?{% if ma_loai %}loai={{ ma_loai }}&{% elif sort %}sort={{ sort }}&{% endif %}page={{ dsSanPham.paginator.num_pages }}"><i class="fas fa-angle-double-right"></i></a></li>
+                                        {% else %}
+                                        <li class="page-item disabled"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
+                                        {% endif %}
+                                    </ul>
+                                </nav>
+                            </div>
+
+                        </section>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>
